@@ -1,0 +1,32 @@
+.nav-tabs {
+  &.nav-tabs-custom-border {
+    border-bottom: 0px !important;
+
+    .nav-link {
+      margin-bottom: 0px;
+      border: 0px !important;
+    }
+  }
+}
+
+.tab-content {
+  border: solid 1px $gray-200;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+
+  &.border-top-warning {
+    border-top-color: $warning !important;
+  }
+
+  &.border-top-success {
+    border-top-color: $success !important;
+  }
+
+  &.border-top-danger {
+    border-top-color: $danger !important;
+  }
+
+  &.border-top-info {
+    border-top-color: $info !important;
+  }
+}

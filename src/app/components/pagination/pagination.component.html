@@ -1,0 +1,27 @@
+<ul class="pagination position-relative responsive">
+  <li class="page-item me-2">
+    <button class="page-link rounded-1 ps-2 pe-2 pb-2" [disabled]="currentPage === 1" (click)="goToPage(pageTypes.FIRST)">
+      <app-icon name="chevron-bar-left" size="20"></app-icon>
+    </button>
+  </li>
+  <li class="page-item me-2">
+    <button class="page-link rounded-1 ps-2 pe-2 pb-2" [disabled]="currentPage === 1" (click)="goToPage(pageTypes.PREVIOUS)">
+      <app-icon name="chevron-left" size="20"></app-icon>
+    </button>
+  </li>
+  <li *ngFor="let page of pages" class="page-item" [ngClass]="{ active: page === currentPage }">
+    <button *ngIf="page === currentPage" class="page-link py-2 rounded-1 me-2">{{ page }}</button>
+    <button *ngIf="page !== currentPage" (click)="onChangePage(page)"
+      class="page-link py-2 d-none d-sm-block rounded-1 me-2">{{ page }}</button>
+  </li>
+  <li class="page-item me-2">
+    <button class="page-link rounded-1 ps-2 pe-2 pb-2" [disabled]="currentPage === totalPages" (click)="goToPage(pageTypes.NEXT)">
+      <app-icon name="chevron-right" size="20"></app-icon>
+    </button>
+  </li>
+  <li class="page-item me-2">
+    <button class="page-link rounded-1 ps-2 pe-2 pb-2" [disabled]="currentPage === totalPages" (click)="goToPage(pageTypes.LAST)">
+      <app-icon name="chevron-bar-right" size="20"></app-icon>
+    </button>
+  </li>
+</ul>

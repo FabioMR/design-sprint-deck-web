@@ -1,0 +1,19 @@
+@import "vars";
+
+.ng-touched.ng-invalid {
+  @extend .is-invalid;
+}
+
+.form-floating {
+  > label {
+    color: $gray-400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - (24px + 48px));
+  }
+}
+
+.form-select.is-null ~ label {
+  transform: none !important;
+}

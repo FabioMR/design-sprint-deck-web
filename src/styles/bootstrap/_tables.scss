@@ -1,0 +1,56 @@
+.table {
+  tbody {
+    a.d-table-row {
+      color: $body-color;
+      text-decoration: none;
+      border-color: $gray-200;
+      @include media-breakpoint-up(md) {
+        .line-clamp {
+          max-width: 100%;
+        }
+      }
+      &:hover {
+        color: $secondary;
+        background: $gray-100;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  th,
+  td {
+    font-size: 0.875rem;
+
+    &.compact {
+      width: 1px;
+      white-space: nowrap;
+    }
+
+    &.nowrap {
+      white-space: nowrap;
+    }
+  }
+
+  th,
+  td {
+    &.no-compact {
+      min-width: 16rem;
+
+      @include media-breakpoint-up(lg) {
+        min-width: 100%;
+      }
+    }
+  }
+
+  .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+    &.two-lines  {
+      -webkit-line-clamp: 2;
+    }
+  }
+}

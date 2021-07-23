@@ -1,0 +1,7 @@
+<div *ngIf="control.touched && control.errors" class="invalid-tooltip d-block">
+  <div *ngIf="control.errors.required">É obrigatório.</div>
+  <div *ngIf="control.errors.minlength as minlength">Deve ter pelo menos {{ minlength.requiredLength }} caracteres.</div>
+  <div *ngIf="control.errors.maxlength as maxlength">Deve ter no máximo {{ maxlength.requiredLength }} caracteres.</div>
+  <div *ngIf="control.errors.email">E-mail inválido.</div>
+  <div *ngIf="control.errors.customMessage as customMessage">{{ customMessage }}</div>
+</div>

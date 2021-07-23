@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+$white: #FFFFFF;
+$gray-100: #F1F2F6;
+$gray-200: #DFE4EA;
+$gray-300: #CED6E0;
+$gray-400: #A4B0BE;
+$gray-500: #747D8C;
+$gray-600: #57606F;
+$gray-700: #3F485A;
+$gray-800: #353C4B;
+$gray-900: #2F3542;
+$black: #000;
+
+$primary-light: #7D7FF2;
+$primary: #5D5FEF;
+$primary-dark: #4A4CBF;
+
+$secondary-light: #5AD9BB;
+$secondary: #31D0AA;
+$secondary-dark: #27A688;
+
+$success: #2ED573;
+$info: #1E90FF;
+$warning: #FFB142;
+$danger: #FF4757;
+$light: $gray-100;
+$dark: $gray-900;
+
+$theme-colors: (
+  "primary-light": $primary-light,
+  "primary": $primary,
+  "primary-dark": $primary-dark,
+  "secondary-light": $secondary-light,
+  "secondary": $secondary,
+  "secondary-dark": $secondary-dark,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+$theme-colors: map-merge(
+  (
+    "white": $white,
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900,
+    "black": $black
+  ),
+  $theme-colors
+);
+
+$body-color: $gray-600;
+$text-muted: $gray-400;
+
+$min-contrast-ratio: 1.8;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+
+$spinner-border-width-sm: .1em;
+
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 3.5;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 1.5;
+
+$headings-font-weight: $font-weight-semi-bold;
+
+$input-btn-padding-y: .688rem;
+$input-btn-padding-x: 1rem;
+
+$btn-padding-y: 0;
+
+$input-color: $body-color;
+$input-placeholder-color: $text-muted;
+$form-check-input-checked-bg-color: $secondary;
+
+$form-floating-padding-y: .688rem;
+$form-floating-height: 3rem;
+$form-floating-input-padding-t: 1rem;
+$form-floating-input-padding-b: 0rem;
+$form-floating-label-opacity: 1;
+
+$border-radius-sm: .5rem;
+$border-radius: 1rem;
+$border-radius-lg: 1.5rem;
+
+$table-border-color: $gray-200;
+$table-group-separator-color: $gray-300;
+$table-hover-bg: $gray-100;
+$table-cell-padding-y: 1rem;
+$table-cell-padding-x: 1rem;
+
+$badge-border-radius: $border-radius-sm;
+
+$spinner-width-sm: 1.5rem;
+$spinner-height-sm: 1.5rem;
+
+$breadcrumb-margin-bottom: 0px;

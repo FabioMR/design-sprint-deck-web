@@ -1,0 +1,22 @@
+<div class="modal fade" id="modalConfirm" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-3 border-0 p-3 p-md-4">
+      <div class="modal-header d-block mb-2 p-0">
+        <h3 class="modal-title text-center">{{ title }}</h3>
+      </div>
+
+      <div class="modal-body p-0">
+        <p class="text-small text-center ws-pre-line mt-3 mb-4" [innerHtml]="description"></p>
+      </div>
+
+      <div class="modal-footer gap-4 p-0">
+        <button class="btn btn-outline-secondary flex-fill flex-basis-0" data-bs-dismiss="modal">Não</button>
+
+        <button (click)="confirm()" [disabled]="confirming" class="btn btn-primary flex-fill flex-basis-0">
+          <span *ngIf="confirming" class="spinner-border spinner-border-sm"></span>
+          <span *ngIf="!confirming">Sim</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

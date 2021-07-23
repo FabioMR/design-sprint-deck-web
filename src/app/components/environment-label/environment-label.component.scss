@@ -1,0 +1,16 @@
+@import 'vars';
+
+.environment-label {
+  font-size: 1rem;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  transform: rotate(45deg);
+  padding: 7px 0;
+  position: fixed;
+  top: 55px;
+  right: -75px;
+  width: 300px;
+  background-color: $primary;
+  color: $white;
+  z-index: 99999;
+}
