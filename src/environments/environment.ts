@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:',
+  apiUrl: 'https://design-sprint-deck.herokuapp.com',
   label: 'Ambiente de teste',
 };

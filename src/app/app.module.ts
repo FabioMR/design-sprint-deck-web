@@ -32,7 +32,7 @@ import { LoaderComponent } from '@components/loader/loader.component';
 import { IconComponent } from '@components/icon/icon.component';
 import { PaginationComponent } from '@components/pagination/pagination.component';
 
-import { HomeComponent } from '@pages/home/home.component';
+import { CardIndexComponent } from '@pages/cards/card-index.component';
 
 import { TermsOfUseComponent } from '@pages/terms-of-use/terms-of-use.component';
 import { Error404Component } from '@pages/error/error-404.component';
@@ -59,7 +59,7 @@ registerLocaleData(localePt, 'pt-BR', localePtExtra);
     LoaderComponent,
     IconComponent,
     PaginationComponent,
-    HomeComponent,
+    CardIndexComponent,
     TermsOfUseComponent,
     Error404Component,
     Error500Component
