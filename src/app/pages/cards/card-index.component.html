@@ -1,7 +1,29 @@
 <h1>Cartões</h1>
 
-<a href="#" class="btn btn-primary">
+<a routerLink="/cartoes/adicionar" class="btn btn-primary">
   Adicionar cartão
 </a>
 
-<pre>{{ cards | json }}</pre>
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Duração</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let card of cards">
+      <td>{{ card.name }}</td>
+      <td>{{ card.kind }}</td>
+      <td>{{ card.duration }}</td>
+      <td>
+        <button (click)="delete(card)" class="btn btn-danger btn-square">
+          <app-icon name="trash" size="16"></app-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

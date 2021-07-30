@@ -33,6 +33,7 @@ import { IconComponent } from '@components/icon/icon.component';
 import { PaginationComponent } from '@components/pagination/pagination.component';
 
 import { CardIndexComponent } from '@pages/cards/card-index.component';
+import { CardNewComponent } from '@pages/cards/card-new.component';
 
 import { TermsOfUseComponent } from '@pages/terms-of-use/terms-of-use.component';
 import { Error404Component } from '@pages/error/error-404.component';
@@ -60,9 +61,10 @@ registerLocaleData(localePt, 'pt-BR', localePtExtra);
     IconComponent,
     PaginationComponent,
     CardIndexComponent,
+    CardNewComponent,
     TermsOfUseComponent,
     Error404Component,
-    Error500Component
+    Error500Component,
   ],
   imports: [
     BrowserModule,

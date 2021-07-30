@@ -6,6 +6,7 @@ import { NoAuthGuard } from '@guards/no-auth.guard';
 import { LayoutComponent } from '@components/layout/layout.component';
 
 import { CardIndexComponent } from '@pages/cards/card-index.component';
+import { CardNewComponent } from '@pages/cards/card-new.component';
 
 import { TermsOfUseComponent } from '@pages/terms-of-use/terms-of-use.component';
 import { Error404Component } from '@pages/error/error-404.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
       { path: '', component: CardIndexComponent },
+      { path: 'cartoes/adicionar', component: CardNewComponent },
     ]
   },
   { path: 'termos-de-uso', component: TermsOfUseComponent },
