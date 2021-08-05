@@ -5,18 +5,22 @@ import { NoAuthGuard } from '@guards/no-auth.guard';
 
 import { LayoutComponent } from '@components/layout/layout.component';
 
-import { CardIndexComponent } from '@pages/cards/card-index.component';
-import { CardNewComponent } from '@pages/cards/card-new.component';
-
 import { TermsOfUseComponent } from '@pages/terms-of-use/terms-of-use.component';
 import { Error404Component } from '@pages/error/error-404.component';
 import { Error500Component } from '@pages/error/error-500.component';
+
+import { CardIndexComponent } from '@pages/cards/card-index.component';
+import { CardNewComponent } from '@pages/cards/card-new.component';
+import { CardEditComponent } from './pages/cards/card-edit.component';
+import { CardShowComponent } from './pages/cards/card-show.component';
 
 const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
       { path: '', component: CardIndexComponent },
       { path: 'cartoes/adicionar', component: CardNewComponent },
+      { path: 'cartoes/:id/alterar', component: CardEditComponent },
+      { path: 'cartoes/:id', component: CardShowComponent },
     ]
   },
   { path: 'termos-de-uso', component: TermsOfUseComponent },

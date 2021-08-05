@@ -1,0 +1,43 @@
+<h1 class="mb-5">Visualizar cartão</h1>
+
+<div class="d-flex justify-content-between mb-5">
+  <a [routerLink]="['alterar']" class="btn btn-primary">
+    Alterar cartão
+  </a>
+
+  <button (click)="delete()" class="btn btn-danger btn-square">
+    <app-icon name="trash"></app-icon>
+  </button>
+</div>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
+
+<dl *ngIf="data; else loader" class="mb-5">
+  <dt>Nome</dt>
+  <dd>{{ data.name }}</dd>
+
+  <dt>Tipo</dt>
+  <dd>{{ data.kind }}</dd>
+
+  <dt>Entrada</dt>
+  <dd>{{ data.input }}</dd>
+
+  <dt>Saída</dt>
+  <dd>{{ data.output }}</dd>
+
+  <dt>Duração</dt>
+  <dd>{{ data.duration }}</dd>
+
+  <dt>Descrição curta</dt>
+  <dd>{{ data.shortDescription }}</dd>
+
+  <dt>Descrição longa</dt>
+  <dd>{{ data.description }}</dd>
+
+  <dt>Etapas</dt>
+  <dd>{{ data.steps }}</dd>
+</dl>
+
+<a routerLink="/" class="btn btn-secondary">Voltar</a>

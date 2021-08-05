@@ -32,12 +32,15 @@ import { LoaderComponent } from '@components/loader/loader.component';
 import { IconComponent } from '@components/icon/icon.component';
 import { PaginationComponent } from '@components/pagination/pagination.component';
 
-import { CardIndexComponent } from '@pages/cards/card-index.component';
-import { CardNewComponent } from '@pages/cards/card-new.component';
-
 import { TermsOfUseComponent } from '@pages/terms-of-use/terms-of-use.component';
 import { Error404Component } from '@pages/error/error-404.component';
 import { Error500Component } from '@pages/error/error-500.component';
+
+import { CardIndexComponent } from '@pages/cards/card-index.component';
+import { CardNewComponent } from '@pages/cards/card-new.component';
+import { CardEditComponent } from './pages/cards/card-edit.component';
+import { CardFormComponent } from './pages/cards/card-form.component';
+import { CardShowComponent } from './pages/cards/card-show.component';
 
 export function tokenGetter() {
   return localStorage.token;
@@ -60,11 +63,14 @@ registerLocaleData(localePt, 'pt-BR', localePtExtra);
     LoaderComponent,
     IconComponent,
     PaginationComponent,
-    CardIndexComponent,
-    CardNewComponent,
     TermsOfUseComponent,
     Error404Component,
     Error500Component,
+    CardIndexComponent,
+    CardNewComponent,
+    CardEditComponent,
+    CardFormComponent,
+    CardShowComponent,
   ],
   imports: [
     BrowserModule,

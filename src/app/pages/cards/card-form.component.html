@@ -1,0 +1,63 @@
+<app-loader *ngIf="!form"></app-loader>
+
+<form *ngIf="form" [formGroup]="form">
+  <div class="form-group position-relative mb-3">
+    <label for="name">Nome</label>
+    <input formControlName="name" type="text" class="form-control">
+    <app-form-control-errors [control]="form.controls.name"></app-form-control-errors>
+  </div>
+
+  <div class="form-group position-relative mb-3">
+    <label for="kind">Tipo</label>
+    <select [formControl]="form.controls.kind" id="kind" class="form-select">
+      <option [value]="null"></option>
+      <option *ngFor="let kind of kinds" [value]="kind.id">{{ kind.label }}</option>
+    </select>
+    <app-form-control-errors [control]="form.controls.kind"></app-form-control-errors>
+  </div>
+
+  <div class="form-group position-relative mb-3">
+    <label for="input">Entrada</label>
+    <input [formControl]="form.controls.input" type="text" class="form-control">
+    <app-form-control-errors [control]="form.controls.input"></app-form-control-errors>
+  </div>
+
+  <div class="form-group position-relative mb-3">
+    <label for="output">Saída</label>
+    <input [formControl]="form.controls.output" type="text" class="form-control">
+    <app-form-control-errors [control]="form.controls.output"></app-form-control-errors>
+  </div>
+
+  <div class="form-group position-relative mb-3">
+    <label for="duration">Duração</label>
+    <input [formControl]="form.controls.duration" type="number" class="form-control">
+    <app-form-control-errors [control]="form.controls.duration"></app-form-control-errors>
+  </div>
+
+  <div class="form-group position-relative mb-3">
+    <label for="shortDescription">Descrição curta</label>
+    <input [formControl]="form.controls.shortDescription" type="text" class="form-control">
+    <app-form-control-errors [control]="form.controls.shortDescription"></app-form-control-errors>
+  </div>
+
+  <div class="form-group position-relative mb-3">
+    <label for="description">Descrição</label>
+    <textarea [formControl]="form.controls.description" class="form-control" rows="10"></textarea>
+    <app-form-control-errors [control]="form.controls.description"></app-form-control-errors>
+  </div>
+
+  <div class="form-group position-relative mb-3">
+    <label for="steps">Etapas</label>
+    <textarea [formControl]="form.controls.steps" class="form-control" rows="10"></textarea>
+    <app-form-control-errors [control]="form.controls.steps"></app-form-control-errors>
+  </div>
+
+  <div class="d-flex gap-3 mt-5">
+    <button (click)="save()" [disabled]="saving" class="btn btn-primary" type="submit">
+      <app-loader *ngIf="saving" [isSmall]="true"></app-loader>
+      <span *ngIf="!saving">Salvar</span>
+    </button>
+
+    <a [routerLink]="backPath" class="btn btn-secondary">Cancelar</a>
+  </div>
+</form>
